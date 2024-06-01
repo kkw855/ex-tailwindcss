@@ -6,7 +6,15 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
   ],
   theme: {
-    extend: {},
+    // default theme 은 유지하면서 커스텀 추가
+    extend: {
+      colors: {
+        vuejs: {
+          100: '#49e659',
+            932: '#434252'
+        }
+      },
+    },
   },
   plugins: [],
 }
