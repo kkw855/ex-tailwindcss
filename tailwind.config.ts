@@ -6,8 +6,17 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
   ],
   theme: {
-    // default theme 은 유지하면서 커스텀 추가
+    // theme 에 설정하면 default 유지 안함
     extend: {
+      fontFamily: {
+        nanumGothic: ['var(--nanum-gothic)']
+      },
+      // fontSize: {
+      //   xs: '12px',
+      //   sm: '15px',
+      //   base: '18px'
+      // },
+      // default theme 은 유지하면서 커스텀 추가하려면 extend
       colors: {
         vuejs: {
           100: '#49e659',

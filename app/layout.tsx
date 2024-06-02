@@ -1,10 +1,15 @@
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata } from "next"
+import { Inter, Nanum_Gothic } from "next/font/google"
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
+const nanumGothic = Nanum_Gothic({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  variable: '--nanum-gothic'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${nanumGothic.variable}`}>{children}</body>
     </html>
   );
 }
